@@ -12,8 +12,15 @@ body, p, a, span {
     font-family: 'Lato', serif;
 }
 
+/* ======================== */
+/* Solución para Scroll Horizontal en Móviles */
+/* ======================== */
 body {
     margin: 0px;
+    /* ESTO ES LA CLAVE para solucionar el desbordamiento */
+    overflow-x: hidden; 
+    /* Y esto asegura que los elementos tomen el ancho de la pantalla */
+    width: 100%; 
 }
 
 /* ======================== */
@@ -555,4 +562,5 @@ p {
         flex-direction: column;
         gap: 20px; /* Esto añade espacio entre el formulario y el mapa */
     }
+
 }
