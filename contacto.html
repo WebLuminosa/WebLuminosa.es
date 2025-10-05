@@ -30,24 +30,45 @@
     </main>
 
     <section class="contenedor-contacto">
-        <div class="formulario-wrapper">
-            <h2>Envíanos un Mensaje</h2>
-            <form action="https://formspree.io/f/movkwqzd" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto">
-                
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </div>
+        <form action="https://formspree.io/f/movkwqzd" method="POST">
+    
+    <h2>Solicita tu Presupuesto Luminoso</h2>
+    <p>Cuéntanos un poco sobre lo que necesitas para que te enviemos un precio fijo y transparente en menos de 24 horas.</p>
+
+    <fieldset>
+        <label for="nombre">Tu Nombre Completo:</label>
+        <input type="text" id="nombre" name="Nombre del Cliente" required>
+
+        <label for="email">Tu Email:</label>
+        <input type="email" id="email" name="Email del Cliente" required>
+        
+        <label for="negocio">Nombre de tu Negocio:</label>
+        <input type="text" id="negocio" name="Nombre del Negocio" required>
+    </fieldset>
+
+    <fieldset>
+        <label for="paquete">¿Qué tipo de web te interesa?</label>
+        <select id="paquete" name="Paquete Seleccionado">
+            <option value="landing_page">Landing Page (1 Página) [110€ a 130€]</option>
+            <option value="web_completa">Web Completa (Múltiples Secciones) [180€ a 210€]</option>
+            <option value="solo_logo">Solo Diseño de Logo</option>
+            <option value="no_se">No estoy seguro/a, necesito asesoramiento</option>
+        </select>
+
+        <label for="contenido">¿Ya tienes el texto y las fotos listos?</label>
+        <select id="contenido" name="Contenido Listo">
+            <option value="si">Sí, tengo todo organizado.</option>
+            <option value="casi">Casi, necesito un par de días para terminar.</option>
+            <option value="no">No, necesito ayuda para organizarlo.</option>
+        </select>
+        
+        <label for="detalles">Cuéntanos más sobre tu proyecto y la web que imaginas:</label>
+        <textarea id="detalles" name="Detalles del Proyecto" rows="5"></textarea>
+
+    </fieldset>
+
+    <button type="submit">¡Solicitar Presupuesto!</button>
+</form>
 
         <div class="info-wrapper">
             <h2>Nuestra Ubicación</h2>
