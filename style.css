@@ -414,61 +414,181 @@ p {
 /* ======================== */
 /* Sección de Contacto      */
 /* ======================== */
-.contenedor-contacto {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 20px;
+
+.contenedor-principal {
+    display: flex; 
+    gap: 30px; 
+    justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 50px;
+    padding: 20px;
 }
 
-.formulario-wrapper {
-    flex-grow: 1;
-}
-
-.formulario-wrapper h2,
-.info-wrapper h2 {
-    color: #ff6200;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.formulario-wrapper label {
-    display: block;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.formulario-wrapper input[type="text"],
-.formulario-wrapper input[type="email"],
-.formulario-wrapper textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
+.primer-contenedor,
+.segundo-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid;
+    flex: 1;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.formulario-wrapper button {
-    background-color: #ff6200;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    cursor: pointer;
+.imagen-pequena {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 15%;
+    background-color: #ffe100;
+    padding: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; 
+}
+
+/* ======================== */
+/* Planes de Mantenimiento */
+/* ======================== */
+.contenedor-planes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Para que funcione en móvil */
+}
+
+.plan-tarjeta {
+    flex-basis: 30%;
+    min-width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plan-tarjeta.principal {
+    border: 3px solid #FF6B35; /* Borde para destacar el plan recomendado */
+    transform: scale(1.03); /* Ligeramente más grande */
+}
+
+.plan-titulo {
+    font-size: 24px;
+    color: #FF6B35;
+    margin-bottom: 10px;
+}
+
+.plan-precio {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.plan-tarjeta ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.plan-tarjeta ul li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    color: #555;
+}
+
+.plan-tarjeta ul li:last-child {
+    border-bottom: none;
+}
+
+.plan-tarjeta ul li.excluido {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/* ======================== */
+/* Sección de Contacto      */
+/* ======================== */
+/* --- ESTILOS GENERALES DEL FORMULARIO --- */
+form {
+    max-width: 600px; /* Limita el ancho en pantallas grandes */
+    margin: 40px auto; /* Centra el formulario */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo suave */
+}
+
+h2 {
+    color: rgb(255, 106, 0);
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+}
+
+label {
+    display: block; /* Cada etiqueta en su propia línea */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* --- ESTILOS DE ENTRADAS Y TEXTAREAS --- */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Ocupa todo el espacio disponible */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Crucial para evitar que el padding aumente el ancho */
+    margin-bottom: 10px;
     font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+/* --- ESTILO DEL BOTÓN DE ENVÍO --- */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffc107; /* Amarillo brillante o 'luminoso' */
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.formulario-wrapper button:hover {
-    background-color: #ff8800;
-}
-
-.info-wrapper {
-    flex-grow: 1;
+button[type="submit"]:hover {
+    background-color: #e0a800; /* Color más oscuro al pasar el ratón */
 }
 
 .mapa-container {
@@ -488,6 +608,34 @@ p {
 .email-info {
     margin-top: 30px;
     text-align: center;
+}
+
+/* Añade este bloque al final de tu CSS (o dentro de la sección de Contacto) */
+.contenedor-contacto {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+    gap: 50px; /* Espacio entre el formulario y la información */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Asegura que la información de la derecha no sea tan ancha como el formulario */
+.info-wrapper {
+    flex-basis: 300px; /* Le da un ancho fijo para que el formulario tome más espacio */
+    padding-top: 40px; /* Alinea visualmente con la parte superior del formulario */
+    text-align: center;
+}
+
+/* Asegúrate de que en móvil vuelva a ser columna (ya lo tienes en el Media Query, ¡bien hecho!) */
+@media (max-width: 768px) {
+    .contenedor-contacto {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+    .info-wrapper {
+        flex-basis: auto; /* Desactiva el ancho fijo en móvil */
+    }
 }
 
 /* ======================== */
@@ -569,4 +717,5 @@ p {
     }
 
 }
+
 
