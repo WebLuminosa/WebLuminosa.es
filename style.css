@@ -12,15 +12,8 @@ body, p, a, span {
     font-family: 'Lato', serif;
 }
 
-/* ======================== */
-/* Solución para Scroll Horizontal en Móviles */
-/* ======================== */
 body {
     margin: 0px;
-    /* ESTO ES LA CLAVE para solucionar el desbordamiento */
-    overflow-x: hidden; 
-    /* Y esto asegura que los elementos tomen el ancho de la pantalla */
-    width: 100%; 
 }
 
 /* ======================== */
@@ -175,6 +168,56 @@ p {
 }
 
 /* ======================== */
+/* Sección Destacada        */
+/* ======================== */
+.contenedor-destacado {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7; /* Fondo sutil para que destaque */
+}
+
+.titulo-destacado {
+    font-size: 32px;
+    color: #FF6B35;
+    margin-bottom: 5px;
+}
+
+.subtitulo-destacado {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.ejemplo-visual {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imagen-destacada {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.boton-portafolio {
+    display: inline-block;
+    background-color: #004D99; /* Usa un color de acento (el azul marino que definimos) */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.boton-portafolio:hover {
+    background-color: #003366;
+}
+
+/* ======================== */
 /* Sección ¿Por qué elegirnos? */
 /* ======================== */
 .elegirnos-text {
@@ -195,6 +238,71 @@ p {
 
 .contenedor-elegirnos h2{
     margin-bottom: 50px;
+}
+
+/* ... [Contenido existente de style.css] ... */
+
+/* ======================== */
+/* Sección Destacada (NUEVO)*/
+/* ======================== */
+.contenedor-destacado {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7; /* Fondo sutil para que destaque */
+}
+
+.titulo-destacado {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    color: #FF6B35; /* Naranja principal */
+    margin-bottom: 5px;
+}
+
+.subtitulo-destacado {
+    font-family: 'Lato', serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.ejemplo-visual {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.imagen-destacada {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.boton-portafolio {
+    display: inline-block;
+    background-color: #004D99; /* Azul Marino (Acento) */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    font-family: 'Lato', serif;
+}
+
+.boton-portafolio:hover {
+    background-color: #003366;
+}
+
+/* Ajustes de Media Query para móvil */
+@media (max-width: 768px) {
+    .contenedor-destacado {
+        padding: 30px 10px;
+    }
+    .titulo-destacado {
+        font-size: 26px;
+    }
 }
 
 /* ======================== */
@@ -311,110 +419,6 @@ p {
 /* ======================== */
 /* Sección Servicios      */
 /* ======================== */
-.contenedor-principal {
-    display: flex; 
-    gap: 30px; 
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.primer-contenedor,
-.segundo-contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid;
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.imagen-pequena {
-    width: 120px; 
-    height: 120px; 
-    border-radius: 15%;
-    background-color: #ffe100;
-    padding: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
-}
-
-/* ======================== */
-/* Planes de Mantenimiento */
-/* ======================== */
-.contenedor-planes {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 50px auto;
-    padding: 0 20px;
-    max-width: 1200px;
-    flex-wrap: wrap; /* Para que funcione en móvil */
-}
-
-.plan-tarjeta {
-    flex-basis: 30%;
-    min-width: 280px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-tarjeta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.plan-tarjeta.principal {
-    border: 3px solid #FF6B35; /* Borde para destacar el plan recomendado */
-    transform: scale(1.03); /* Ligeramente más grande */
-}
-
-.plan-titulo {
-    font-size: 24px;
-    color: #FF6B35;
-    margin-bottom: 10px;
-}
-
-.plan-precio {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333333;
-}
-
-.plan-tarjeta ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    text-align: left;
-}
-
-.plan-tarjeta ul li {
-    padding: 10px 0;
-    border-bottom: 1px dashed #eee;
-    color: #555;
-}
-
-.plan-tarjeta ul li:last-child {
-    border-bottom: none;
-}
-
-.plan-tarjeta ul li.excluido {
-    color: #ccc;
-    text-decoration: line-through;
-}
-
-/* ======================== */
-/* Sección de Contacto      */
-/* ======================== */
-
 .contenedor-principal {
     display: flex; 
     gap: 30px; 
@@ -643,11 +647,6 @@ button[type="submit"]:hover {
 /* ======================== */
 @media (max-width: 768px) {
     /* Header */
-    header {
-        /* 15px arriba/abajo, 10px izquierda/derecha */
-        padding: 15px 10px; 
-    }
-    
     nav {
         display: flex;
         flex-direction: column;
@@ -715,7 +714,4 @@ button[type="submit"]:hover {
         flex-direction: column;
         gap: 20px; /* Esto añade espacio entre el formulario y el mapa */
     }
-
 }
-
-
