@@ -1,0 +1,176 @@
+/* ======================================= */
+/* ESTILOS DE ANULACIÓN - TEMA HALLOWEEN   */
+/* ¡MÁS NARANJA - MENOS MORADO! */
+/* ======================================= */
+
+/* --------------------------------- */
+/* 1. CORRECCIÓN Y BASE DE HALLOWEEN */
+/* --------------------------------- */
+.tema-halloween body {
+    background-color: #1a1a1a; /* Fondo muy oscuro */
+    color: #ccc;
+}
+
+.texto-wrapper p {
+    color: rgb(175, 175, 175);
+}
+
+/* Encabezado: NARANJA DOMINANTE */
+.tema-halloween header {
+    background: linear-gradient(135deg, #FF6600, #CC5500); /* Naranja fuerte a Naranja oscuro */
+    border-bottom: 3px solid #6A0DAD; /* Borde Morado (ACENTO) */
+}
+
+.tema-halloween nav a,
+.tema-halloween .logo span {
+    color: #1a1a1a; /* Texto oscuro para contraste con el naranja */
+}
+
+.tema-halloween nav a:hover {
+    color: #6A0DAD; /* Morado al pasar el ratón (ACENTO) */
+}
+
+/* Hero: Fondo OSCURO para que el texto NARANJA resalte */
+.tema-halloween .hero,
+.tema-halloween .hero2 {
+    background-color: #1a1a1a; /* Fondo Oscuro */
+    color: #ff6600; 
+}
+
+.tema-halloween .hero h1,
+.tema-halloween .hero2 h1 {
+    color: #ff6600; 
+}
+
+
+/* Botón Principal (CTA): NARANJA */
+.tema-halloween .boton-llamar {
+    background-color: #FF6600; /* Botón Naranja */
+    color: #1a1a1a; /* Texto Oscuro */
+    border: 2px solid #6A0DAD; /* Borde Morado (ACENTO) */
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.7); /* Sombra Naranja */
+}
+
+.tema-halloween .boton-llamar:hover {
+    background-color: #e55e00;
+    color: white;
+}
+
+/* Títulos de las secciones: NARANJA */
+.tema-halloween .titulo,
+.tema-halloween .subtitulo,
+.tema-halloween .titulo-destacado {
+    color: #FF6600; 
+}
+
+
+/* --------------------------------- */
+/* 2. INDEX.HTML (SERVICIOS Y DESTACADO) */
+/* --------------------------------- */
+
+/* Botones de Servicios (Diseño Web/Logo) */
+.tema-halloween .boton {
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.4); /* Sombra Naranja */
+    color: #FF6600; /* Texto del botón en Naranja */
+}
+
+.tema-halloween .boton:hover {
+    background-color: #FF6600; /* Naranja al pasar el ratón */
+    color: white;
+}
+
+/* Sección Por qué Elegirnos */
+.tema-halloween .elegirnos-text {
+    color: #FF6600; /* El acento pasa a Naranja */
+}
+
+/* NUEVA SECCIÓN: Trabajo Destacado */
+.tema-halloween .contenedor-destacado {
+    background-color: #1a1a1a; 
+}
+
+.tema-halloween .boton-portafolio {
+    background-color: #FF6600; /* Botón de portafolio en Naranja */
+    border: 2px solid #6A0DAD; /* Borde Morado (ACENTO) */
+}
+
+.tema-halloween .boton-portafolio:hover {
+    background-color: #e55e00;
+}
+
+
+/* --------------------------------- */
+/* 3. SERVICIOS.HTML (PLANES) */
+/* --------------------------------- */
+
+/* Fondo de iconos en NARANJA */
+.tema-halloween .imagen-pequena {
+    background-color: #FF6600; 
+}
+
+/* Borde de contenedores y cards en NARANJA */
+.tema-halloween .primer-contenedor,
+.tema-halloween .segundo-contenedor,
+.tema-halloween .plan-tarjeta {
+    border: 1px solid #FF6600; 
+}
+
+.tema-halloween .plan-tarjeta {
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.2); 
+    background-color: #333333; 
+}
+
+.tema-halloween .plan-tarjeta.principal {
+    border: 3px solid #FF6600; /* Borde NARANJA para destacar */
+}
+
+.tema-halloween .plan-titulo,
+.tema-halloween .plan-precio {
+    color: #FF6600; /* Títulos y precios en NARANJA */
+}
+
+
+/* --------------------------------- */
+/* 4. CONTACTO.HTML (FORMULARIO) */
+/* --------------------------------- */
+
+.tema-halloween form,
+.tema-halloween fieldset {
+    border: 1px solid #FF6600; /* Bordes del formulario en NARANJA */
+}
+
+.tema-halloween button[type="submit"] {
+    background-color: #FF6600; /* Botón de envío en NARANJA */
+    color: #1a1a1a;
+}
+
+
+/* --------------------------------- */
+/* 5. NOSOTROS Y PORTAFOLIO */
+/* --------------------------------- */
+
+.tema-halloween .mision,
+.tema-halloween .introduccion {
+    background-color: #333333; /* Fondo Oscuro, no morado */
+}
+
+.tema-halloween .portfolio-item {
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.5); /* Sombra NARANJA */
+}
+
+/* --------------------------------- */
+/* 6. CARRUSEL (Ajustes de Halloween) */
+/* --------------------------------- */
+/* El .slide hereda .hero, por lo que solo ajustamos los dots */
+
+/* --------------------------------- */
+/* 6. CARRUSEL (Ajustes de Halloween) */
+/* --------------------------------- */
+.tema-halloween .dot {
+    background-color: rgba(255, 102, 0, 0.5); /* Naranja semi-transparente */
+}
+
+.tema-halloween .dot.active {
+    background-color: #FF6600; /* Naranja fuerte */
+    border: 1px solid #6A0DAD; /* Borde Morado */
+}
