@@ -1,0 +1,225 @@
+/* ======================================= */
+/* ESTILOS DE ANULACIÓN - TEMA NAVIDAD     */
+/* BASE: BLANCO | ACENTO: ROJO Y DORADO    */
+/* Se aplica cuando el <body> tiene la clase .tema-navidad */
+/* ======================================= */
+
+/* --------------------------------- */
+/* 1. BASE: FONDO Y TEXTO */
+/* --------------------------------- */
+
+/* El fondo es blanco puro, el texto es oscuro (Rojo o Negro/Gris) */
+.tema-navidad body {
+    background-color: #FFFFFF; /* Blanco Puro */
+    color: #333333; /* Texto gris oscuro/casi negro */
+}
+
+/* --------------------------------- */
+/* 2. ENCABEZADO Y NAVEGACIÓN */
+/* --------------------------------- */
+
+/* Encabezado: Rojo Navideño */
+.tema-navidad header {
+    /* Un rojo sólido o un gradiente sutil con algo de dorado */
+    background: linear-gradient(135deg, #FF0000, #CC0000); 
+    border-bottom: 3px solid #FFD700; /* Dorado brillante */
+}
+
+.tema-navidad nav a,
+.tema-navidad .logo span {
+    color: white; /* Texto blanco para contraste */
+}
+
+.tema-navidad nav a:hover {
+    color: #FFD700; /* Dorado al pasar el ratón */
+}
+
+/* --------------------------------- */
+/* 3. HERO / TÍTULOS / BOTONES */
+/* --------------------------------- */
+
+/* Hero: Se mantiene el fondo blanco del body, o le damos un rojo suave */
+.tema-navidad .hero,
+.tema-navidad .hero2 {
+    background-color: #f6f0f0; /* Un blanco muy suave/gris claro */
+    color: #333333;
+    border-bottom: 2px solid #FF0000; /* Borde rojo */
+}
+
+.tema-navidad .subtitulo {
+    color: #CC0000;
+}
+
+
+.tema-navidad .hero h1,
+.tema-navidad .hero2 h1 {
+    color: #CC0000; /* Títulos principales en Rojo */
+}
+
+/* Botón principal (Llamada a la acción) */
+.tema-navidad .boton-llamar {
+    background-color: #CC0000; /* Rojo */
+    color: white;
+    border: 2px solid #FFD700; /* Dorado */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Brillo Dorado */
+}
+
+.tema-navidad .boton-llamar:hover {
+    background-color: #990000; /* Rojo más oscuro */
+}
+
+.tema-navidad .boton {
+    border: 4px solid;
+    border-color: #FFD700;
+    color: #CC0000;
+    transition: border 0.25s;
+}
+
+.tema-navidad .boton:hover {
+    background-color: green;
+    color: white;
+    border: 4px solid;
+    border-color: #CC0000;
+}
+
+/* Títulos y acentos */
+.tema-navidad .titulo,
+.tema-navidad .titulo-destacado,
+.tema-navidad h2 {
+    color: white; /* Títulos de sección en Rojo */
+}
+
+.tema-navidad .contenedor-destacado p {
+    color: #FFD700;
+}
+
+.tema-navidad .elegirnos-text {
+    color: #FFD700; /* Acentos en Dorado */
+    font-weight: bold;
+}
+
+.tema-navidad .contenedor-destacado {
+    background-color: #CC0000; 
+}
+
+/* --------------------------------- */
+/* 5. NOSOTROS.HTML (AJUSTES DE LECTURA) */
+/* --------------------------------- */
+
+/* Ajustar el contenedor principal de la introducción */
+.tema-navidad .introduccion {
+    /* Fondo Blanco: asegurar que todo el texto sea oscuro */
+    color: #333333; 
+}
+
+/* Texto del párrafo dentro del contenedor (clave para la legibilidad) */
+.tema-navidad .texto-wrapper p {
+    color: #333333; /* Forzar el texto a gris oscuro */
+}
+
+/* Imagen de la introducción (añadir un marco navideño) */
+.tema-navidad .imagen-introduccion {
+    border: 5px solid #CC0000; /* Borde Rojo */
+    border-radius: 8px; /* Borde suave */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Sombra suave dorada */
+}
+
+/* Título de la Misión (si tiene una clase diferente) */
+.tema-navidad .titulo-mision {
+    color: #CC0000; /* Rojo */
+    border-bottom: 2px solid #FFD700; /* Línea dorada */
+    padding-bottom: 5px;
+}
+
+/* Párrafo de la Misión */
+.tema-navidad .mision {
+    color: #555555; /* Gris para buena lectura */
+}
+
+
+/* --------------------------------- */
+/* 4. SERVICIOS.HTML (PLANES Y CAJAS) */
+/* --------------------------------- */
+
+/* Iconos */
+.tema-navidad .imagen-pequena {
+    background-color: #CC0000; /* Rojo */
+}
+
+/* Tarjetas y contenedores con fondo blanco y borde rojo */
+.tema-navidad .primer-contenedor,
+.tema-navidad .segundo-contenedor,
+.tema-navidad .plan-tarjeta {
+    background-color: #FFFFFF; /* Fondo Blanco */
+    border: 1px solid #CC0000; /* Borde Rojo */
+}
+
+.tema-navidad .plan-tarjeta {
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.15); /* Sombra roja sutil */
+}
+
+/* Plan Destacado */
+.tema-navidad .plan-tarjeta.principal {
+    border: 3px solid #FFD700; /* Borde DORADO para destacar */
+}
+
+.tema-navidad .plan-titulo,
+.tema-navidad .plan-precio {
+    color: #CC0000; /* Títulos y precios en Rojo */
+}
+
+/* --------------------------------- */
+/* 6. PORTAFOLIO.HTML (PROYECTOS) */
+/* --------------------------------- */
+
+.tema-navidad .portfolio-item {
+    background-color: #FFFFFF; /* Fondo Blanco Puro */
+    border: 1px solid #CC0000; /* Borde Rojo */
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Sombra Dorada sutil */
+}
+
+.tema-navidad .portfolio-item img {
+    border-bottom: 3px solid #FFD700; /* Línea Dorada bajo la imagen */
+}
+
+.tema-navidad .portfolio-item p {
+    color: #333333; /* Texto oscuro para legibilidad */
+}
+
+/* --------------------------------- */
+/* 5. CONTACTO.HTML (FORMULARIO) */
+/* --------------------------------- */
+
+.tema-navidad form,
+.tema-navidad fieldset {
+    border: 1px solid #CC0000; /* Bordes del formulario en Rojo */
+    background-color: #FFFFFF; /* Fondo Blanco */
+}
+
+.tema-navidad button[type="submit"] {
+    background-color: #CC0000; /* Botón de enviar en Rojo */
+    color: white;
+}
+
+/* --------------------------------- */
+/* 7. CONTACTO.HTML (FORMULARIO) */
+/* --------------------------------- */
+
+.tema-navidad form,
+.tema-navidad fieldset {
+    border: 1px solid #CC0000; /* Bordes del formulario en Rojo */
+    background-color: #FFFFFF; /* Fondo Blanco */
+}
+
+/* Campos de texto y áreas */
+.tema-navidad input[type="text"], 
+.tema-navidad input[type="email"], 
+.tema-navidad textarea,
+.tema-navidad select {
+    border: 1px solid #CC0000;
+}
+
+.tema-navidad button[type="submit"] {
+    background-color: #CC0000; /* Botón de enviar en Rojo */
+    color: white;
+}
