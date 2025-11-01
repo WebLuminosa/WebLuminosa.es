@@ -715,3 +715,38 @@ button[type="submit"]:hover {
         gap: 20px; /* Esto añade espacio entre el formulario y el mapa */
     }
 }
+
+/* ======================== */
+/* Media Queries (Móviles)   */
+/* ======================== */
+@media (max-width: 768px) {
+    /* 1. Cambiar el Header a apilamiento vertical */
+    header {
+        /* Pasa de 'space-between' a apilar en columna */
+        flex-direction: column; 
+        
+        /* Centrar el logo y el nav apilados */
+        align-items: center; 
+        
+        /* Reducir el padding horizontal para evitar el desbordamiento */
+        padding: 20px 10px; 
+    }
+    
+    /* 2. Asegurar que la navegación ocupe todo el ancho */
+    nav {
+        display: flex;
+        flex-direction: column; /* Esto ya lo tenías, pero es clave */
+        text-align: center;
+        width: 100%; /* Asegura que tome el ancho completo para centrar mejor */
+        margin-top: 15px; /* Espacio entre el logo y el nav */
+    }
+    
+    /* 3. Prevenir el desbordamiento lateral (solución para el espacio blanco) */
+    /* Este es el fix más importante para el scroll lateral */
+    body {
+        overflow-x: hidden; 
+    }
+    
+    /* ... El resto de tus estilos para móvil ... */
+}
+
