@@ -21,11 +21,17 @@ body {
 /* ======================== */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     align-items: center;
     padding: 20px 50px;
     background: linear-gradient(135deg, #ffbb00, #ff6200);
     color: white; /* Usar 'white' es más limpio que 'rgb(255, 255, 255)' */
+}
+
+nav {
+    display: flex; /* La clave para la alineación horizontal por defecto */
+    gap: 20px; /* Añade un pequeño espacio entre los enlaces del nav */
 }
 
 .logo {
@@ -647,19 +653,73 @@ button[type="submit"]:hover {
 /* ======================== */
 @media (max-width: 768px) {
     /* Header */
+
+    /* 1. BODY: FIX para el espacio blanco (Scroll horizontal) */
+    body {
+        overflow-x: hidden; 
+    }
+
+    /* 2. HEADER: Apila el logo y el nav (uno debajo del otro) */
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 10px; /* Menos padding lateral para evitar el desbordamiento */
+    }
+
+    /* 3. NAV: Mantiene los enlaces horizontales y centrados */
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* ¡CRÍTICO!: Mantiene los enlaces horizontales */
+        flex-wrap: wrap;     /* Permite que los enlaces pasen a otra línea si no caben */
+        justify-content: center; /* Centra los enlaces horizontalmente */
         text-align: center;
+        width: 100%; 
+        margin-top: 15px; /* Espacio entre el logo y el menú de navegación */
+    }
+    
+    /* 4. ENLACES: Ajusta el espacio entre los enlaces horizontales */
+    nav a {
+        padding: 5px 10px; 
     }
 
-    .hero h1 {
+
+    /* -- Estilos ya existentes para móvil -- */
+
+    .hero h1, .hero2 h1 {
         font-size: 36px;
     }
 
-    .hero2 h1 {
-        font-size: 36px;
+    .boton {
+        flex-basis: 100%;
+        max-width: 100%;
     }
+    
+    .mision {
+        width: 90%;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .contenedor-principal {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .primer-contenedor,
+    .segundo-contenedor {
+        width: 100%;
+        word-break: break-word;
+        box-sizing: border-box;
+    }
+
+    .info-wrapper {
+        flex-direction: column; 
+        gap: 20px; 
+        flex-basis: auto; 
+    }
+
 
     /* Botones */
     .boton {
@@ -717,36 +777,22 @@ button[type="submit"]:hover {
 }
 
 /* ======================== */
-/* Media Queries (Móviles)   */
+/* Media Query (Tablet/Ancho Medio)   */
 /* ======================== */
-@media (max-width: 768px) {
-    /* 1. Cambiar el Header a apilamiento vertical */
+@media (max-width: 1050px) {
+    /* Forzar el HEADER a apilarse verticalmente ANTES de que desborde */
     header {
-        /* Pasa de 'space-between' a apilar en columna */
         flex-direction: column; 
-        
-        /* Centrar el logo y el nav apilados */
-        align-items: center; 
-        
-        /* Reducir el padding horizontal para evitar el desbordamiento */
-        padding: 20px 10px; 
+        gap: 15px; /* Reduce el espacio entre el logo y el nav */
+        padding: 20px 20px; /* Reduce el padding para pantallas más pequeñas */
     }
     
-    /* 2. Asegurar que la navegación ocupe todo el ancho */
+    /* Asegurar que el nav mantenga los enlaces centrados y en línea */
     nav {
         display: flex;
-        flex-direction: column; /* Esto ya lo tenías, pero es clave */
-        text-align: center;
-        width: 100%; /* Asegura que tome el ancho completo para centrar mejor */
-        margin-top: 15px; /* Espacio entre el logo y el nav */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        width: 100%;
     }
-    
-    /* 3. Prevenir el desbordamiento lateral (solución para el espacio blanco) */
-    /* Este es el fix más importante para el scroll lateral */
-    body {
-        overflow-x: hidden; 
-    }
-    
-    /* ... El resto de tus estilos para móvil ... */
 }
-
