@@ -34,6 +34,24 @@
     color: #FFD700; /* Dorado al pasar el ratón */
 }
 
+/* --- ESTILOS AÑADIDOS PARA EL MENÚ DE HAMBURGUESA ACTIVO (MÓVIL) --- */
+
+.tema-navidad nav.active {
+    /* Fondo del menú desplegable: Degradado de Rojo Navideño */
+    background: linear-gradient(135deg, #CC0000, #990000); 
+}
+
+.tema-navidad nav.active a {
+    /* Color de los enlaces en el menú desplegable: Asegura el color blanco */
+    color: white;
+    /* Separador de los enlaces: Dorado semitransparente */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.4); 
+}
+
+.tema-navidad nav.active a:last-child {
+    border-bottom: none;
+}
+
 /* --------------------------------- */
 /* 3. HERO / TÍTULOS / BOTONES */
 /* --------------------------------- */
@@ -84,12 +102,9 @@
 
 /* Títulos y acentos */
 .tema-navidad .titulo,
+.tema-navidad .titulo-destacado,
 .tema-navidad h2 {
-    color: #CC0000; /* Títulos de sección en Rojo */
-}
-
-.tema-navidad .titulo-destacado {
-    color: white;
+    color: white; /* Títulos de sección en Rojo */
 }
 
 .tema-navidad .contenedor-destacado p {
@@ -187,21 +202,6 @@
 
 .tema-navidad .portfolio-item p {
     color: #333333; /* Texto oscuro para legibilidad */
-}
-
-/* --------------------------------- */
-/* 5. CONTACTO.HTML (FORMULARIO) */
-/* --------------------------------- */
-
-.tema-navidad form,
-.tema-navidad fieldset {
-    border: 1px solid #CC0000; /* Bordes del formulario en Rojo */
-    background-color: #FFFFFF; /* Fondo Blanco */
-}
-
-.tema-navidad button[type="submit"] {
-    background-color: #CC0000; /* Botón de enviar en Rojo */
-    color: white;
 }
 
 /* --------------------------------- */
