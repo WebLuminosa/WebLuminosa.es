@@ -76,7 +76,7 @@
 }
 
 .tema-navidad .boton:hover {
-    background-color: green;
+    background-color: #228B22;
     color: white;
     border: 4px solid;
     border-color: #CC0000;
@@ -84,9 +84,12 @@
 
 /* Títulos y acentos */
 .tema-navidad .titulo,
-.tema-navidad .titulo-destacado,
 .tema-navidad h2 {
-    color: white; /* Títulos de sección en Rojo */
+    color: #CC0000; /* Títulos de sección en Rojo */
+}
+
+.tema-navidad .titulo-destacado {
+    color: white;
 }
 
 .tema-navidad .contenedor-destacado p {
