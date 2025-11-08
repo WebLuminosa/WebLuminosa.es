@@ -84,7 +84,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Botón Hamburguesa */
+/* Botón Hamburguesa - AÑADIDO */
 .menu-toggle {
     display: none;
     background: none;
@@ -165,7 +165,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-/* CLASE BOTÓN CORREGIDA (AHORA ES UN ENLACE <a>) */
+/* CLASE BOTÓN: AHORA ES UN ENLACE (<a>) */
 .boton {
     flex: 1;
     min-width: 280px;
@@ -180,11 +180,12 @@ nav a:hover {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     
-    /* CORRECCIÓN: Hace que todo el enlace sea un contenedor vertical */
+    /* AÑADIDO PARA LA CORRECCIÓN DE CLICKEO Y ALINEACIÓN */
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center;
+    /* FIN CAMBIOS */
 }
 
 .boton:hover {
@@ -680,11 +681,11 @@ hr {
         border-radius: 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
         transition: transform 0.3s ease-out; 
-        transform: translateY(-100%); /* Oculto arriba de la pantalla */
+        transform: translateY(-100%); 
     }
     
     nav.active {
-        display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+        display: flex; 
         transform: translateY(0); 
     }
     
@@ -810,7 +811,7 @@ hr {
 }
 
 /* ======================== */
-/* UTILIDADES Y ANIMACIONES */
+/* UTILIDADES Y ANIMACIONES - AÑADIDO */
 /* ======================== */
 
 /* Animación: Fundido de entrada (Fade-in) */
@@ -826,10 +827,7 @@ hr {
 }
 
 /* Clases iniciales para los elementos que queremos animar */
-/* Si el JS falla o no se carga, el contenido será invisible (opacity: 0). */
-.hero, .titulo, .seccion, .contenedor-elegirnos, .contenedor-destacado, footer,
-.contenedor-sobre, .portfolio-section, .contenedor-principal, .contenedor-planes,
-.contenedor-contacto {
+.hero, .titulo, .seccion, .contenedor-elegirnos, .contenedor-destacado, footer {
     opacity: 0; 
 }
 
