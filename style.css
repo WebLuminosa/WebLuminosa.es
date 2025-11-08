@@ -1,282 +1,263 @@
 /* ======================== */
-/* Estilos Generales        */
+/* RESET Y ESTILOS BASE */
 /* ======================== */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
 
-body, p, a, span {
-    font-family: 'Lato', serif;
+body, p, a, span, button, input, textarea {
+    font-family: 'Lato', sans-serif;
 }
 
 body {
-    margin: 0px;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
 }
 
 /* ======================== */
-/* Encabezado         */
+/* HEADER Y NAVEGACIÓN */
 /* ======================== */
 header {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 5%;
     background: linear-gradient(135deg, #ffbb00, #ff6200);
-    color: white; /* Usar 'white' es más limpio que 'rgb(255, 255, 255)' */
-}
-
-nav {
-    display: flex; /* La clave para la alineación horizontal por defecto */
-    gap: 20px; /* Añade un pequeño espacio entre los enlaces del nav */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
 .logo {
-    display: flex; 
-    align-items: center; 
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo img {
-    height: 70px;
-    width: 70px; 
-    margin-right: 10px; 
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 .logo span {
-    color: white; 
-    letter-spacing: 1.5px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Navegación Desktop */
+nav {
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-size: 20px;
-    margin-top: 3px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffe100;
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
+/* Botón Hamburguesa - AÑADIDO */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001; 
+}
 
 /* ======================== */
-/* Secciones Hero      */
+/* HERO SECTIONS */
 /* ======================== */
-.hero {
-    /* Simplificamos el fondo para mejorar la legibilidad del texto */
-    background-color: #FF6B35; /* Nuevo Naranja Vibrante */
-    background-image: none; /* Eliminamos la imagen de repetición */
+.hero, .hero2 {
+    background-color: #ccc;
     color: white;
     text-align: center;
-    padding: 100px 15px; /* Reducimos el padding */
+    padding: 80px 5%;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.hero h1, .hero2 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-.hero p {
-    font-size: 20px;
-}
-
-.hero2 {
-    /* Usamos el mismo estilo para ambos heroes para consistencia */
-    background-color: #FF6B35; 
-    background-image: none; 
-    color: white;
-    text-align: center;
-    padding: 100px 15px;
-}
-
-.hero2 h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero2 p {
-    font-size: 20px;
+.hero p, .hero2 p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ======================== */
-/* Botones y Secciones     */
+/* BOTONES PRINCIPALES */
 /* ======================== */
 .boton-llamar {
     display: inline-block;
-    background-color: #FFB703; /* Amarillo/Dorado para destacar */
-    color: #333333; /* Texto oscuro sobre botón claro */
-    padding: 12px 35px; /* Hacemos el padding un poco más generoso */
-    margin-top: 20px;
-    border-radius: 5px;
+    background: #FFB703;
+    color: #333;
+    padding: 14px 35px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 700; /* Lo hacemos más grueso */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 183, 3, 0.3);
 }
 
 .boton-llamar:hover {
-    background-color: #ff9d00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #ff9d00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 183, 3, 0.4);
     color: white;
+}
+
+/* ======================== */
+/* SECCIÓN SERVICIOS */
+/* ======================== */
+.titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #FF6B35;
+    margin: 40px 0 30px;
+    padding: 0 5%;
 }
 
 .seccion {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    gap: 30px;
+    margin: 40px 5%;
     flex-wrap: wrap;
 }
 
 .boton {
-    font-size: 30px;
-    color: rgb(255, 106, 0);
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px;
-    box-sizing: border-box;
-    margin-left: 50px;
-    margin-right: 50px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
     text-decoration: none;
-    transition: background-color 0.25s, color 0.25s;
+    color: #ff6a00;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .boton:hover {
-    background-color: rgb(255, 186, 74);
-    color: white;
-}
-
-p {
-    text-align: center;
-    margin: 0;
-    margin-top: 10px;
-    padding-bottom: 10px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255,106,0,0.2);
+    border-color: #ff6a00;
 }
 
 .image-button {
-    width: 100px;
-    display: block;
-    margin: auto;
-    padding-top: 20px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
-.titulo {
-    font-size: 30px;
-    margin-left: 50px;
-    font-weight: 400;
+.boton:hover .image-button {
+    transform: scale(1.1);
 }
 
-/* ======================== */
-/* Sección Destacada        */
-/* ======================== */
-.contenedor-destacado {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f7f7f7; /* Fondo sutil para que destaque */
-}
-
-.titulo-destacado {
-    font-size: 32px;
-    color: #FF6B35;
-    margin-bottom: 5px;
-}
-
-.subtitulo-destacado {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.ejemplo-visual {
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.imagen-destacada {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.boton-portafolio {
-    display: inline-block;
-    background-color: #004D99; /* Usa un color de acento (el azul marino que definimos) */
-    color: white;
-    padding: 15px 40px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s;
-}
-
-.boton-portafolio:hover {
-    background-color: #003366;
-}
-
-/* ======================== */
-/* Sección ¿Por qué elegirnos? */
-/* ======================== */
-.elegirnos-text {
-    font-size: 23px;
-    color: rgb(255, 106, 0);
+.boton p {
+    font-size: 1.3rem;
     font-weight: 600;
-    text-align: left;
-    margin-left: 50px;
+    margin: 0;
+    color: inherit;
+}
+
+/* ======================== */
+/* SECCIÓN ELEGIRNOS */
+/* ======================== */
+.contenedor-elegirnos {
+    padding: 50px 5%;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.contenedor-elegirnos h2 {
+    color: #FF6B35;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
 
 .contenedor-elegirnos p {
-    font-size: 23px;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    margin-right: 7px;
+    font-size: 1.2rem;
+    margin: 15px auto;
+    max-width: 800px;
+    text-align: center;
 }
 
-.contenedor-elegirnos h2{
-    margin-bottom: 50px;
+.elegirnos-text {
+    color: #FF6B35;
+    font-weight: 700;
 }
-
-/* ... [Contenido existente de style.css] ... */
 
 /* ======================== */
-/* Sección Destacada (NUEVO)*/
+/* SECCIÓN DESTACADA */
 /* ======================== */
 .contenedor-destacado {
+    padding: 60px 5%;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f7f7f7; /* Fondo sutil para que destaque */
+    background: white;
 }
 
 .titulo-destacado {
-    font-family: 'Merriweather', serif;
-    font-size: 32px;
-    color: #FF6B35; /* Naranja principal */
-    margin-bottom: 5px;
+    color: #FF6B35;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .subtitulo-destacado {
-    font-family: 'Lato', serif;
-    font-size: 18px;
     color: #666;
+    font-size: 1.1rem;
     margin-bottom: 30px;
 }
 
 .ejemplo-visual {
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .imagen-destacada {
@@ -287,220 +268,216 @@ p {
 
 .boton-portafolio {
     display: inline-block;
-    background-color: #004D99; /* Azul Marino (Acento) */
+    background: #004D99;
     color: white;
-    padding: 15px 40px;
-    border-radius: 5px;
+    padding: 12px 35px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s;
-    font-family: 'Lato', serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .boton-portafolio:hover {
-    background-color: #003366;
-}
-
-/* Ajustes de Media Query para móvil */
-@media (max-width: 768px) {
-    .contenedor-destacado {
-        padding: 30px 10px;
-    }
-    .titulo-destacado {
-        font-size: 26px;
-    }
+    background: #003366;
+    transform: translateY(-2px);
 }
 
 /* ======================== */
-/* Sección Nosotros       */
+/* SECCIÓN NOSOTROS */
 /* ======================== */
 .contenedor-sobre {
-    padding: 40px;
-}
-
-.titulo-introduccion {
-    margin-left: 35px;
-    font-size: 40px;
-}
-
-.introduccion {
-    font-size: 18px;
-    text-align: left;
-    background-color: #ffa54c;
-    padding: 15px;
-    border-radius: 12px;
-    line-height: 1.5;
-}
-
-.titulo-mision {
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    margin-top: 75px;
-}
-
-.mision {
-    width: 50%;
-    margin: 0 auto;
-    font-size: 18px;
-    background-color: #ffc635;
-    padding: 15px;
-    border-radius: 12px;
+    padding: 40px 5%;
 }
 
 .intro-seccion {
     display: flex;
     align-items: center;
-    gap: 30px; 
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .texto-wrapper {
-    flex-grow: 1; 
-    text-align: left;
+    flex: 1;
+    min-width: 300px;
 }
 
-.texto-wrapper h1,
-.texto-wrapper p {
-    text-align: left;
+.texto-wrapper h2 {
+    color: #FF6B35;
     margin-bottom: 20px;
-    line-height: 1.6;
+    font-size: 1.8rem;
+}
+
+.introduccion {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #FF6B35;
+    margin-bottom: 25px;
+    text-align: left;
 }
 
 .imagen-introduccion {
-    width: 450px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.titulo-mision {
+    text-align: center;
+    color: #FF6B35;
+    font-size: 2rem;
+    margin: 40px 0 30px;
+}
+
+.mision {
+    background: #fff3e0;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border-left: 4px solid #FF6B35;
 }
 
 /* ======================== */
-/* Portafolio          */
+/* PORTAFOLIO */
 /* ======================== */
 .subtitulo {
     text-align: center;
-    margin-top: 100px;
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 100px;
+    color: #FF6B35;
+    font-size: 1.8rem;
+    margin: 40px 0;
 }
 
 .portfolio-section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 40px 5%;
 }
 
 .portfolio-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .portfolio-item {
-    width: 350px; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-    border-radius: 8px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
     overflow: hidden;
-    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.portfolio-item p {
-    padding: 8px;
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
-    display: block;
-    background-color: black;
+    height: 200px;
+    object-fit: cover;
 }
 
-.portfolio-item img:hover {
-    opacity: 0.8;
+.portfolio-item p {
+    padding: 20px;
+    text-align: center;
+    color: #333;
 }
 
 /* ======================== */
-/* Sección Servicios      */
+/* SERVICIOS DETALLADOS */
 /* ======================== */
 .contenedor-principal {
-    display: flex; 
-    gap: 30px; 
+    display: flex;
+    gap: 30px;
+    margin: 40px 5%;
+    flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
-.primer-contenedor,
-.segundo-contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid;
+.primer-contenedor, .segundo-contenedor {
     flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
+    min-width: 300px;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 2px solid #FF6B35;
 }
 
 .imagen-pequena {
-    width: 120px; 
-    height: 120px; 
-    border-radius: 15%;
-    background-color: #ffe100;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #FFB703;
     padding: 10px;
-    object-fit: cover;
-    margin-bottom: 10px; 
+}
+
+.primer-contenedor h2, .segundo-contenedor h2 {
+    color: #FF6B35;
+    margin-bottom: 15px;
+}
+
+.primer-contenedor p, .segundo-contenedor p {
+    color: #666;
+    line-height: 1.6;
 }
 
 /* ======================== */
-/* Planes de Mantenimiento */
+/* PLANES DE MANTENIMIENTO */
 /* ======================== */
 .contenedor-planes {
     display: flex;
+    gap: 25px;
+    margin: 50px 5%;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    margin: 50px auto;
-    padding: 0 20px;
-    max-width: 1200px;
-    flex-wrap: wrap; /* Para que funcione en móvil */
 }
 
 .plan-tarjeta {
-    flex-basis: 30%;
+    flex: 1;
     min-width: 280px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    background: white;
     padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
 }
 
 .plan-tarjeta:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
 }
 
 .plan-tarjeta.principal {
-    border: 3px solid #FF6B35; /* Borde para destacar el plan recomendado */
-    transform: scale(1.03); /* Ligeramente más grande */
+    border-color: #FF6B35;
+    transform: scale(1.05);
 }
 
 .plan-titulo {
-    font-size: 24px;
     color: #FF6B35;
+    font-size: 1.4rem;
     margin-bottom: 10px;
 }
 
 .plan-precio {
-    font-size: 36px;
+    color: #333;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #333333;
 }
 
 .plan-tarjeta ul {
@@ -511,7 +488,7 @@ p {
 }
 
 .plan-tarjeta ul li {
-    padding: 10px 0;
+    padding: 8px 0;
     border-bottom: 1px dashed #eee;
     color: #555;
 }
@@ -526,273 +503,348 @@ p {
 }
 
 /* ======================== */
-/* Sección de Contacto      */
+/* FORMULARIO DE CONTACTO */
 /* ======================== */
-/* --- ESTILOS GENERALES DEL FORMULARIO --- */
-form {
-    max-width: 600px; /* Limita el ancho en pantallas grandes */
-    margin: 40px auto; /* Centra el formulario */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9; /* Fondo suave */
+.contenedor-contacto {
+    display: flex;
+    gap: 40px;
+    margin: 40px 5%;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-h2 {
-    color: rgb(255, 106, 0);
+.contenedor-contacto form {
+    flex: 2;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.contenedor-contacto h2 {
+    color: #FF6B35;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 fieldset {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 6px;
+    border-radius: 8px;
+    border: none;
+    background: #f8f9fa;
 }
 
 legend {
-    font-weight: bold;
+    font-weight: 700;
     color: #333;
     padding: 0 10px;
 }
 
 label {
-    display: block; /* Cada etiqueta en su propia línea */
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
     color: #555;
 }
 
-/* --- ESTILOS DE ENTRADAS Y TEXTAREAS --- */
 input[type="text"],
 input[type="email"],
 select,
 textarea {
-    width: 100%; /* Ocupa todo el espacio disponible */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Crucial para evitar que el padding aumente el ancho */
-    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #FF6B35;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionar solo verticalmente */
+    resize: vertical;
+    min-height: 100px;
 }
 
-/* --- ESTILO DEL BOTÓN DE ENVÍO --- */
 button[type="submit"] {
-    display: block;
     width: 100%;
+    background: #FF6B35;
+    color: white;
     padding: 15px;
-    background-color: #ffc107; /* Amarillo brillante o 'luminoso' */
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #e0a800; /* Color más oscuro al pasar el ratón */
+    background: #e55a25;
+    transform: translateY(-2px);
+}
+
+.info-wrapper {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
 
 .mapa-container {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    width: 100%;
-    height: 350px;
-    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin: 20px 0;
 }
 
 .mapa-container iframe {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    border: none;
 }
 
 .email-info {
     margin-top: 30px;
-    text-align: center;
 }
 
-/* Añade este bloque al final de tu CSS (o dentro de la sección de Contacto) */
-.contenedor-contacto {
-    display: flex; /* Activa Flexbox */
-    justify-content: space-around; /* Distribuye el espacio entre los elementos */
-    gap: 50px; /* Espacio entre el formulario y la información */
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Asegura que la información de la derecha no sea tan ancha como el formulario */
-.info-wrapper {
-    flex-basis: 300px; /* Le da un ancho fijo para que el formulario tome más espacio */
-    padding-top: 40px; /* Alinea visualmente con la parte superior del formulario */
-    text-align: center;
-}
-
-/* Asegúrate de que en móvil vuelva a ser columna (ya lo tienes en el Media Query, ¡bien hecho!) */
-@media (max-width: 768px) {
-    .contenedor-contacto {
-        flex-direction: column; 
-        gap: 20px; 
-    }
-    .info-wrapper {
-        flex-basis: auto; /* Desactiva el ancho fijo en móvil */
-    }
+.email-info h2 {
+    color: #FF6B35;
+    margin-bottom: 10px;
 }
 
 /* ======================== */
-/* Media Queries (Móviles)   */
+/* FOOTER */
+/* ======================== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 40px 5%;
+}
+
+/* ======================== */
+/* MEDIA QUERIES - MOBILE FIRST */
 /* ======================== */
 @media (max-width: 768px) {
-    /* Header */
-
-    /* 1. BODY: FIX para el espacio blanco (Scroll horizontal) */
-    body {
-        overflow-x: hidden; 
-    }
-
-    /* 2. HEADER: Apila el logo y el nav (uno debajo del otro) */
+    /* Header Mobile */
     header {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 20px 10px; /* Menos padding lateral para evitar el desbordamiento */
+        padding: 12px 4%;
+        flex-wrap: nowrap; /* Cambio: Evita que el logo y el toggle se envuelvan */
     }
-
-    /* 3. NAV: Mantiene los enlaces horizontales y centrados */
+    
+    .menu-toggle {
+        display: block; /* Cambio: Muestra el botón de hamburguesa */
+    }
+    
     nav {
-        display: flex;
-        flex-direction: row; /* ¡CRÍTICO!: Mantiene los enlaces horizontales */
-        flex-wrap: wrap;     /* Permite que los enlaces pasen a otra línea si no caben */
-        justify-content: center; /* Centra los enlaces horizontalmente */
-        text-align: center;
-        width: 100%; 
-        margin-top: 15px; /* Espacio entre el logo y el menú de navegación */
+        display: none; /* Cambio: Oculta la navegación por defecto en móvil */
+        position: absolute;
+        top: 74px; /* Debajo del header */
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+        background: linear-gradient(135deg, #ffbb00, #ff6200); /* Fondo para el menú móvil */
+        padding: 0;
+        border-radius: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease-out; /* Transición para la animación de apertura */
+        transform: translateY(-100%); /* Oculto arriba de la pantalla */
     }
     
-    /* 4. ENLACES: Ajusta el espacio entre los enlaces horizontales */
+    nav.active {
+        display: flex; /* Cambio: Muestra el menú cuando tiene la clase 'active' */
+        transform: translateY(0); /* Lo mueve a su posición visible */
+    }
+    
     nav a {
-        padding: 5px 10px; 
+        text-align: center;
+        padding: 15px;
+        background: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
-
-    /* -- Estilos ya existentes para móvil -- */
-
+    nav a:last-child {
+        border-bottom: none;
+    }
+    
+    .logo span {
+        font-size: 1.2rem;
+    }
+    
+    /* Hero Mobile */
+    .hero, .hero2 {
+        padding: 60px 4%;
+    }
+    
     .hero h1, .hero2 h1 {
-        font-size: 36px;
+        font-size: 2rem;
     }
-
+    
+    .hero p, .hero2 p {
+        font-size: 1.1rem;
+    }
+    
+    /* Botones Mobile */
+    .boton-llamar {
+        padding: 12px 30px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .seccion {
+        margin: 30px 4%;
+        gap: 20px;
+    }
+    
     .boton {
-        flex-basis: 100%;
-        max-width: 100%;
+        min-width: 100%;
+        margin: 0;
     }
     
-    .mision {
-        width: 90%;
-    }
-
-    .portfolio-item {
-        width: 100%;
-    }
-
-    .contenedor-principal {
-        flex-direction: column;
-        gap: 40px;
+    /* Textos Mobile */
+    .titulo {
+        font-size: 1.8rem;
+        margin: 30px 0 20px;
     }
     
-    .primer-contenedor,
-    .segundo-contenedor {
-        width: 100%;
-        word-break: break-word;
-        box-sizing: border-box;
-    }
-
-    .info-wrapper {
-        flex-direction: column; 
-        gap: 20px; 
-        flex-basis: auto; 
-    }
-
-
-    /* Botones */
-    .boton {
-        flex-basis: 100%;
-        max-width: 100%;
+    .contenedor-elegirnos p {
+        font-size: 1.1rem;
+        text-align: left;
+        padding: 0 10px;
     }
     
-    .mision {
-        width: 90%;
-    }
-
-    /* Portafolio */
-    .portfolio-item {
-        width: 100%;
-    }
-
-    /* Servicios */
-    .contenedor-principal {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .primer-contenedor,
-    .segundo-contenedor {
-        width: 100%;
-        word-break: break-word;
-        box-sizing: border-box;
-    }
-
-    /* Nosotros */
+    /* Nosotros Mobile */
     .intro-seccion {
         flex-direction: column;
         text-align: center;
     }
+    
     .imagen-introduccion {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .introduccion, .mision {
+        text-align: left;
+        padding: 15px;
+    }
+    
+    /* Contacto Mobile */
+    .contenedor-contacto {
+        flex-direction: column;
+        margin: 20px 4%;
+    }
+    
+    .contenedor-contacto form {
         width: 100%;
     }
     
-    .introduccion {
-        text-align: center;
-        width: 75%;
-        padding: 10px;
+    /* Planes Mobile */
+    .contenedor-planes {
+        margin: 30px 4%;
+    }
+    
+    .plan-tarjeta {
+        min-width: 100%;
+    }
+    
+    .plan-tarjeta.principal {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1, .hero2 h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero p, .hero2 p {
+        font-size: 1rem;
     }
     
     .titulo {
-        text-align: center;
-        margin: 0;
+        font-size: 1.6rem;
     }
-
-    /*Contacto*/
-    .contenedor-contacto {
-        flex-direction: column;
-        gap: 20px; /* Esto añade espacio entre el formulario y el mapa */
+    
+    .boton {
+        padding: 25px 15px;
+    }
+    
+    .image-button {
+        width: 60px;
+        height: 60px;
     }
 }
 
 /* ======================== */
-/* Media Query (Tablet/Ancho Medio)   */
+/* UTILIDADES Y ANIMACIONES - AÑADIDO */
 /* ======================== */
-@media (max-width: 1050px) {
-    /* Forzar el HEADER a apilarse verticalmente ANTES de que desborde */
-    header {
-        flex-direction: column; 
-        gap: 15px; /* Reduce el espacio entre el logo y el nav */
-        padding: 20px 20px; /* Reduce el padding para pantallas más pequeñas */
+
+/* Animación: Fundido de entrada (Fade-in) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
-    /* Asegurar que el nav mantenga los enlaces centrados y en línea */
-    nav {
-        display: flex;
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        width: 100%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Clases iniciales para los elementos que queremos animar */
+.hero, .titulo, .seccion, .contenedor-elegirnos, .contenedor-destacado, footer {
+    opacity: 0; /* Ocultos por defecto para la animación */
+}
+
+/* Clase que JS añadirá para activar la animación */
+.is-visible {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Clases de utilidad */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.p-20 {
+    padding: 20px;
 }
