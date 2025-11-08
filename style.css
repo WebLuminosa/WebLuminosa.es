@@ -84,7 +84,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Botón Hamburguesa - AÑADIDO */
+/* Botón Hamburguesa */
 .menu-toggle {
     display: none;
     background: none;
@@ -165,6 +165,7 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+/* CLASE BOTÓN CORREGIDA (AHORA ES UN ENLACE <a>) */
 .boton {
     flex: 1;
     min-width: 280px;
@@ -178,6 +179,12 @@ nav a:hover {
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    
+    /* CORRECCIÓN: Hace que todo el enlace sea un contenedor vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 }
 
 .boton:hover {
@@ -268,7 +275,7 @@ nav a:hover {
 
 .boton-portafolio {
     display: inline-block;
-    background: #228B22;
+    background: #004D99;
     color: white;
     padding: 12px 35px;
     border-radius: 8px;
@@ -278,7 +285,7 @@ nav a:hover {
 }
 
 .boton-portafolio:hover {
-    background: #155515;
+    background: #003366;
     transform: translateY(-2px);
 }
 
@@ -652,33 +659,33 @@ hr {
     /* Header Mobile */
     header {
         padding: 12px 4%;
-        flex-wrap: nowrap; /* Cambio: Evita que el logo y el toggle se envuelvan */
+        flex-wrap: nowrap; 
     }
     
     .menu-toggle {
-        display: block; /* Cambio: Muestra el botón de hamburguesa */
+        display: block; /* Muestra el botón de hamburguesa */
     }
     
     nav {
-        display: none; /* Cambio: Oculta la navegación por defecto en móvil */
+        display: none; 
         position: absolute;
-        top: 74px; /* Debajo del header */
+        top: 74px; 
         left: 0;
         width: 100%;
         flex-direction: column;
         gap: 0;
         margin-top: 0;
-        background: linear-gradient(135deg, #ffbb00, #ff6200); /* Fondo para el menú móvil */
+        background: linear-gradient(135deg, #ffbb00, #ff6200); 
         padding: 0;
         border-radius: 0;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease-out; /* Transición para la animación de apertura */
+        transition: transform 0.3s ease-out; 
         transform: translateY(-100%); /* Oculto arriba de la pantalla */
     }
     
     nav.active {
-        display: flex; /* Cambio: Muestra el menú cuando tiene la clase 'active' */
-        transform: translateY(0); /* Lo mueve a su posición visible */
+        display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+        transform: translateY(0); 
     }
     
     nav a {
@@ -803,7 +810,7 @@ hr {
 }
 
 /* ======================== */
-/* UTILIDADES Y ANIMACIONES - AÑADIDO */
+/* UTILIDADES Y ANIMACIONES */
 /* ======================== */
 
 /* Animación: Fundido de entrada (Fade-in) */
@@ -819,8 +826,11 @@ hr {
 }
 
 /* Clases iniciales para los elementos que queremos animar */
-.hero, .titulo, .seccion, .contenedor-elegirnos, .contenedor-destacado, footer {
-    opacity: 0; /* Ocultos por defecto para la animación */
+/* Si el JS falla o no se carga, el contenido será invisible (opacity: 0). */
+.hero, .titulo, .seccion, .contenedor-elegirnos, .contenedor-destacado, footer,
+.contenedor-sobre, .portfolio-section, .contenedor-principal, .contenedor-planes,
+.contenedor-contacto {
+    opacity: 0; 
 }
 
 /* Clase que JS añadirá para activar la animación */
