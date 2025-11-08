@@ -35,6 +35,9 @@
 }
 
 /* --- ESTILOS AÑADIDOS PARA EL MENÚ DE HAMBURGUESA ACTIVO (MÓVIL) --- */
+.tema-navidad .menu-toggle {
+    color: #FFD700; /* Icono de hamburguesa en Dorado */
+}
 
 .tema-navidad nav.active {
     /* Fondo del menú desplegable: Degradado de Rojo Navideño */
@@ -51,7 +54,6 @@
 .tema-navidad nav.active a:last-child {
     border-bottom: none;
 }
-
 /* --------------------------------- */
 /* 3. HERO / TÍTULOS / BOTONES */
 /* --------------------------------- */
@@ -86,6 +88,16 @@
     background-color: #990000; /* Rojo más oscuro */
 }
 
+.tema-navidad .titulo,
+.tema-navidad h2 {
+    color: #228B22; /* Títulos de sección en Verde Abeto (nuevo acento) */
+}
+
+.tema-navidad .titulo-destacado {
+    color: white;
+}
+
+/* Botones de Servicio (Index) */
 .tema-navidad .boton {
     border: 4px solid;
     border-color: #FFD700;
@@ -94,21 +106,29 @@
 }
 
 .tema-navidad .boton:hover {
-    background-color: #228B22;
+    background-color: #228B22; /* Verde Abeto al pasar el ratón */
     color: white;
     border: 4px solid;
     border-color: #CC0000;
 }
 
-/* Títulos y acentos */
-.tema-navidad .titulo,
-.tema-navidad .titulo-destacado,
-.tema-navidad h2 {
-    color: white; /* Títulos de sección en Rojo */
+
+/* SECCIÓN DESTACADA */
+
+.tema-navidad .contenedor-destacado {
+    background-color: #CC0000; /* Fondo Rojo */
 }
 
-.tema-navidad .contenedor-destacado p {
-    color: #FFD700;
+.tema-navidad .boton-portafolio {
+    background-color: #228B22;
+}
+
+.tema-navidad .boton-portafolio:hover {
+    background-color: #114f11;
+}
+
+.tema-navidad .subtitulo-destacado {
+    color: #FFD700; /* Texto en Dorado */
 }
 
 .tema-navidad .elegirnos-text {
@@ -116,47 +136,8 @@
     font-weight: bold;
 }
 
-.tema-navidad .contenedor-destacado {
-    background-color: #CC0000; 
-}
-
 /* --------------------------------- */
-/* 5. NOSOTROS.HTML (AJUSTES DE LECTURA) */
-/* --------------------------------- */
-
-/* Ajustar el contenedor principal de la introducción */
-.tema-navidad .introduccion {
-    /* Fondo Blanco: asegurar que todo el texto sea oscuro */
-    color: #333333; 
-}
-
-/* Texto del párrafo dentro del contenedor (clave para la legibilidad) */
-.tema-navidad .texto-wrapper p {
-    color: #333333; /* Forzar el texto a gris oscuro */
-}
-
-/* Imagen de la introducción (añadir un marco navideño) */
-.tema-navidad .imagen-introduccion {
-    border: 5px solid #CC0000; /* Borde Rojo */
-    border-radius: 8px; /* Borde suave */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Sombra suave dorada */
-}
-
-/* Título de la Misión (si tiene una clase diferente) */
-.tema-navidad .titulo-mision {
-    color: #CC0000; /* Rojo */
-    border-bottom: 2px solid #FFD700; /* Línea dorada */
-    padding-bottom: 5px;
-}
-
-/* Párrafo de la Misión */
-.tema-navidad .mision {
-    color: #555555; /* Gris para buena lectura */
-}
-
-
-/* --------------------------------- */
-/* 4. SERVICIOS.HTML (PLANES Y CAJAS) */
+/* 4. SECCIONES SECUNDARIAS */
 /* --------------------------------- */
 
 /* Iconos */
@@ -186,10 +167,19 @@
     color: #CC0000; /* Títulos y precios en Rojo */
 }
 
-/* --------------------------------- */
-/* 6. PORTAFOLIO.HTML (PROYECTOS) */
-/* --------------------------------- */
+/* Nosotros.html */
+.tema-navidad .introduccion {
+    background: #e6f7e6; /* Verde muy claro (Abeto suave) */
+    color: #333333; 
+}
+.tema-navidad .texto-wrapper p {
+    color: #333333; 
+}
+.tema-navidad .mision {
+    background: #fcf7e1; /* Amarillo muy suave */
+}
 
+/* Portafolio.html */
 .tema-navidad .portfolio-item {
     background-color: #FFFFFF; /* Fondo Blanco Puro */
     border: 1px solid #CC0000; /* Borde Rojo */
@@ -200,28 +190,18 @@
     border-bottom: 3px solid #FFD700; /* Línea Dorada bajo la imagen */
 }
 
-.tema-navidad .portfolio-item p {
-    color: #333333; /* Texto oscuro para legibilidad */
-}
-
-/* --------------------------------- */
-/* 7. CONTACTO.HTML (FORMULARIO) */
-/* --------------------------------- */
-
+/* Contacto.html */
 .tema-navidad form,
 .tema-navidad fieldset {
     border: 1px solid #CC0000; /* Bordes del formulario en Rojo */
     background-color: #FFFFFF; /* Fondo Blanco */
 }
-
-/* Campos de texto y áreas */
 .tema-navidad input[type="text"], 
 .tema-navidad input[type="email"], 
 .tema-navidad textarea,
 .tema-navidad select {
     border: 1px solid #CC0000;
 }
-
 .tema-navidad button[type="submit"] {
     background-color: #CC0000; /* Botón de enviar en Rojo */
     color: white;
